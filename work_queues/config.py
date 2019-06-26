@@ -1,1 +1,1 @@
-QUEUE_NAME = 'task_queue'
+QUEUE_NAME: str = 'task_queue'
