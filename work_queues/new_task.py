@@ -17,7 +17,7 @@ channel.queue_declare(queue=QUEUE_NAME, durable=True)
 message = ' '.join(sys.argv[1:]) or "Hello World!"
 channel.basic_publish(exchange='',
                       routing_key=QUEUE_NAME,
-                      body=bytes(message),
+                      body=bytes(message, encoding='utf8'),
                       properties=pika.BasicProperties(delivery_mode=2),  # makes message persistent
                       )
 
