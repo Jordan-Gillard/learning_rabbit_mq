@@ -11,7 +11,7 @@ connection: BlockingConnection = pika.BlockingConnection(pika.ConnectionParamete
 channel: Channel = connection.channel()
 
 # Create a queue
-channel.queue_declare(queue=QUEUE_NAME, durable=True)
+# channel.queue_declare(queue=QUEUE_NAME, durable=True)
 
 
 message = ' '.join(sys.argv[1:]) or "Hello World!"
